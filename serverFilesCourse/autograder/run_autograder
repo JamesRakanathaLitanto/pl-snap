@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# working
+
+# cp -r /usr/src/cache/node_modules/. /grade/serverFilesCourse/autograder/node_modules/
+
+# SUBMISSION=`find /grade/student -regex ".*\.xml"`
+
+# cp "$SUBMISSION" /grade/serverFilesCourse/autograder/submission.xml
+
+# cd /grade/serverFilesCourse/autograder
+
+# node autograder.js
+
+# timing test
+
+#!/bin/bash
+start=`date +%s`  # Get the current time in seconds
+
+# cp -r /usr/src/cache/node_modules/. /grade/serverFilesCourse/autograder/node_modules/
+
+SUBMISSION=`find /grade/student -regex ".*\.xml"`
+
+cp "$SUBMISSION" /grade/serverFilesCourse/autograder/submission.xml
+# cp "$SUBMISSION" /usr/src/cache/submission.xml
+
+# cd /grade/serverFilesCourse/autograder 
+cd /usr/src/cache
+
+cp /grade/serverFilesCourse/autograder/autograder.js /usr/src/cache/autograder.js
+node autograder.js 
+
+end=`date +%s`  # Get the current time in seconds
+
+runtime=$((end-start))  # Calculate the difference
+
+echo "Script runtime: $runtime seconds"

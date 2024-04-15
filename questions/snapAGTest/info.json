@@ -1,0 +1,17 @@
+    {
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Snap! AG test",
+    "topic": "Algebra",
+    "tags": ["mwest", "fa17", "tpl101", "v3"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+    "enabled": true,
+    "image": "localhost:5000/snap-test",
+    "serverFilesCourse": ["/autograder"],
+    "entrypoint": "/grade/elements/pl-snap/autograder/run_autograder",
+    "timeout": 60,
+    "enableNetworking": true
+    }
+}
