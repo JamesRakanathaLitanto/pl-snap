@@ -1,4 +1,5 @@
 # Set the base image.
+# Version: 1.1
 FROM node:slim
 
 RUN mkdir /usr/src/cache
@@ -19,4 +20,7 @@ RUN apt-get update && apt-get install curl gnupg -y \
 # Install the application's dependencies into the node_modules's cache directory.
 COPY package.json ./
 COPY package-lock.json ./
+COPY autograder/autograder.js ./
+COPY autograder/run_autograder ./
 RUN npm install
+

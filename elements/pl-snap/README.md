@@ -1,5 +1,6 @@
 Question authoring:
 1.	Example info.json: 
+```json 
     {
     "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
     "title": "Snap! AG test",
@@ -8,11 +9,10 @@ Question authoring:
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
-    "externalGradingOptions": {
+        "externalGradingOptions": {
         "enabled": true,
-        "image": "localhost:5000/snap-test",
-        "serverFilesCourse": ["/autograder"],
-        "entrypoint": "/grade/serverFilesCourse/autograder/run_autograder",
+        "image": "localhost:5000/snap-test-new",
+        "entrypoint": "/usr/src/cache/run_autograder",
         "timeout": 60,
         "enableNetworking": true
         }
@@ -21,10 +21,9 @@ Question authoring:
     Key points:
         a.	gradingMethod needs to be External
         b.	externalGradingOptions:
-        a.	enabled must be true
-        b.	image points to the autograder docker image
-        c.	serverFilesCourse adds the autograder folder
-        d.	entrypoint runs the “run_autograder” script
+            -	enabled must be true
+            -	image points to the autograder docker image
+            -	entrypoint runs the “run_autograder” script
 
 2.	question.html:
     - pl-snap has two attributes:

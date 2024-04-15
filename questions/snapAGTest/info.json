@@ -8,9 +8,8 @@
     "gradingMethod": "External",
     "externalGradingOptions": {
     "enabled": true,
-    "image": "localhost:5000/snap-test",
-    "serverFilesCourse": ["/autograder"],
-    "entrypoint": "/grade/elements/pl-snap/autograder/run_autograder",
+    "image": "localhost:5000/snap-test-new",
+    "entrypoint": "/usr/src/cache/run_autograder",
     "timeout": 60,
     "enableNetworking": true
     }

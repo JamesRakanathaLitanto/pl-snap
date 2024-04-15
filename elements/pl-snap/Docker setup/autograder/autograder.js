@@ -53,7 +53,7 @@ async function main() {
 	console.time("Grading Time");
 	console.log("Grading submission...");
 	const url = "https://snap.berkeley.edu/snap/snap.html",
-    	submissionPath = "/grade/serverFilesCourse/autograder/submission.xml",
+    	submissionPath = "/usr/src/cache/submission.xml",
     	resultsPath = "/grade/results/results.json",
     	autograderPath = "/grade/tests/autograder.xml",
 		secretNumber = 0;
